@@ -46,6 +46,12 @@ if config.first_boot == 'True':
     with open('doers\config.py', 'w') as p:
         p.write(pword)
     print('password set')
+    ask_c = input('what is the channel url?:')
+    with open('doers\config.py') as c:
+        chan = p.read().replace('channel_placeholder', ask_c)
+    with open('doers\config.py', 'w') as c:
+        c.write(chan)
+    print('channel added')
     time.sleep(2)
     clear()
     menu()

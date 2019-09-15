@@ -3,6 +3,7 @@ first_boot='True'
 #account being used
 email = 'email_placeholder'
 password = 'password_placeholder'
+channel = 'channel_placeholder'
 
 #msg times (in seconds)
 gamble_time = 11 #default = eleven

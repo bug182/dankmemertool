@@ -9,8 +9,9 @@ def settings():
     clear = os.system('cls')
     print('1)msg time')
     print('2)gamble amount')
-    print('3)accounts')
-    print('4)back')
+    print('3)account')
+    print('4)channel')
+    print('5)back')
     choice = input('select option:')
     if choice == '1':
         msg_time()
@@ -19,6 +20,8 @@ def settings():
     elif choice == '3':
         accounts()
     elif choice == '4':
+        channel()
+    elif choice == '5':
         import main
         main.menu()
     else:
@@ -101,3 +104,22 @@ def accounts():
     else:
         print('thats not an option numbnuts')
         accounts()
+
+
+def channel():
+    print('current channel url = ' + config.channel)
+    print('1)change channel')
+    print('2)back')
+    choice = input('choose:')
+    if choice == '1':
+        ask_c = input('new channel url:')
+        with open('doers/config.py') as c:
+            chan = c.read().replace(config.channel, ask_c)
+        with open('doers/config.py', 'w') as c:
+            c.write(chan)
+        config = reload(doers.config)
+        channel()
+    elif choice == '2':
+        settings()
+    else:
+        print('thats not an option numbnuts')
