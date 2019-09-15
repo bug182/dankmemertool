@@ -1,6 +1,7 @@
 import time
 import  doers.config
 import os
+from importlib import reload
 
 config = doers.config
 
@@ -107,6 +108,8 @@ def accounts():
 
 
 def channel():
+    config = reload(doers.config)
+    os.system('clear')
     print('current channel url = ' + config.channel)
     print('1)change channel')
     print('2)back')
