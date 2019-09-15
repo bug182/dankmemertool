@@ -6,7 +6,6 @@ from importlib import reload
 config = doers.config
 
 def settings():
-    print('')
     clear = os.system('cls')
     print('1)msg time')
     print('2)gamble amount')
@@ -32,6 +31,7 @@ def settings():
 
 def msg_time():
     clear = os.system('cls')
+    config = reload(doers.config)
     print('gamble time = ' + str(config.gamble_time))
     print('1)change gamble time')
     print('beg time = ' + str(config.beg_time))
@@ -60,6 +60,7 @@ def msg_time():
         msg_time()
 
 def gamble_amount():
+    config = reload(doers.config)
     clear = os.system('cls')
     print('current gamble amount = ' + str(config.gamble_amount))
     print('1)change amount')
@@ -81,7 +82,9 @@ def gamble_amount():
 
 
 def accounts():
-    print('current account email = ' + config.email())
+    config = reload(doers.config)
+    clear = os.system('cls')
+    print('current account email = ' + config.email)
     print('1)change account')
     print('2)back')
     choice = input('choose:')
@@ -109,7 +112,7 @@ def accounts():
 
 def channel():
     config = reload(doers.config)
-    os.system('clear')
+    os.system('cls')
     print('current channel url = ' + config.channel)
     print('1)change channel')
     print('2)back')

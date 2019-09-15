@@ -57,6 +57,6 @@ if config.first_boot == 'True':
     menu()
 else:
     print("booted before")
-    time.sleep(2)
+    time.sleep(1)
     clear()
     menu()
