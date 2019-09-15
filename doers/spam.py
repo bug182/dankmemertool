@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 import doers.config 
 import time
 import os
+config = doers.config
 
 
 
@@ -38,7 +39,7 @@ class gamble:
     def __init__(self):
         os.system('cls')
         config = reload(doers.config)
-        plrint('opening window and loging in')
+        print('opening window and loging in')
         self.driver = webdriver.Firefox(executable_path=r".//doers//geckodriver.exe")
         self.driver.get(config.channel)
         self.emailB = self.driver.find_element_by_xpath("//input[@type='email']")
