@@ -48,7 +48,7 @@ class gamble:
         self.psswrd.send_keys(config.password, Keys.ENTER)
         time.sleep(10)
         print('starting to gamble with ' + str(config.gamble_amount) + ' coins, every ' + str(config.gamble_time) +  'seconds')
-        self.send_msg()
+        self.send_gamble()
 
     def wait_gamble(self):
         time.sleep(config.gamble_time)
