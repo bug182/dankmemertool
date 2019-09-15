@@ -1,9 +1,9 @@
-first_boot='False'
+first_boot='True'
 
 #account being used
-email = 'kylerkibler182@gmail.com'
-password = '4Mydiscord182'
-channel = 'https://discordapp.com/channels/622317235578601482/622317235578601484'
+email = 'email_placeholder'
+password = 'password_placeholder'
+channel = 'channel_placeholder'
 
 #msg times (in seconds)
 gamble_time = 11 #default = eleven
