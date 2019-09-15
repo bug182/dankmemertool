@@ -20,7 +20,7 @@ class beg:
         self.psswrd = self.driver.find_element_by_xpath("//input[@type='password']")
         self.emailB.send_keys(config.email)
         self.psswrd.send_keys(config.password, Keys.ENTER)
-        time.sleep(6)
+        time.sleep(10)
         print('starting to beg every ' + str(config.beg_time) + ' seconds')
         self.send_msg()
 
@@ -46,7 +46,7 @@ class gamble:
         self.psswrd = self.driver.find_element_by_xpath("//input[@type='password']")
         self.emailB.send_keys(config.email)
         self.psswrd.send_keys(config.password, Keys.ENTER)
-        time.sleep(6)
+        time.sleep(10)
         print('starting to gamble with ' + str(config.gamble_amount) + ' coins, every ' + str(config.gamble_time) +  'seconds')
         self.send_msg()
 
