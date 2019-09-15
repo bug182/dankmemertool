@@ -50,12 +50,12 @@ class gamble:
         print('starting to gamble with ' + str(config.gamble_amount) + ' coins, every ' + str(config.gamble_time) +  'seconds')
         self.send_msg()
 
-    def wait_time(self):
+    def wait_gamble(self):
         time.sleep(config.gamble_time)
-        self.send_msg()
+        self.send_gamble()
 
-    def send_msg(self):
+    def send_gamble(self):
         self.msg_box = self.driver.find_element_by_tag_name('textarea')
         self.msg_box.send_keys("pls gamble " + str(config.gamble_amount), Keys.ENTER)
         print('sent gamble')
-        self.wait_time()
+        self.wait_gamble()
